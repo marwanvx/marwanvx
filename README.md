@@ -2,15 +2,27 @@
   ═══════════════════════════════════════════════════════════════════════════
   Marwan — GitHub Profile README
   ───────────────────────────────────────────────────────────────────────────
-  Stack:      Markdown + inline HTML + dynamic SVG endpoints
-  Theme:      GitHub Dark (#0d1117) with neon-green accent (#00ff41)
-  Renders:    Identically across all browsers (no monospace dependency)
-  Sections:   01 Banner · 02 Terminal · 03 Identity · 04 Stack · 05 Stats
-              06 Streak · 07 Activity · 08 Trophies · 09 Snake · 10 Projects
-              11 Motto · 12 Contact · 13 Footer
-  ───────────────────────────────────────────────────────────────────────────
-  Note: All dynamic endpoints are cached by GitHub's camo proxy. If a card
-  fails to render, the upstream service is down — it is not a syntax issue.
+  Architecture:  Dynamic SVG endpoints + GitHub Actions for self-updating data
+  Theme:         GitHub Dark (#0d1117) with neon-green accent (#00ff41)
+  Renders:       Pixel-perfect SVGs for all visitors (no monospace dependency)
+
+  SECTIONS:
+  01 · Banner             — Animated gradient header
+  02 · Identity           — Live terminal card with guestbook
+  03 · Signal             — Neofetch-style stats card (dark/light aware)
+  04 · Stack              — Curated tech icons
+  05 · Metrics            — Extended GitHub stats (successor to github-readme-stats)
+  06 · Streak & Activity  — Commit streak + contribution graph
+  07 · Playable Grid      — Interactive contribution Snake game
+  08 · Selected Work      — Pinned repository cards
+  09 · Motto              — Animated quote
+  10 · Reach Me           — Contact badges
+  11 · Footer             — Closing wave
+
+  MAINTENANCE:
+  - Sections 02 and 03 are dynamic SVGs that fetch live GitHub data.
+  - Section 07 requires a GitHub Action (instructions provided inline).
+  - To customize themes, replace `00ff41` (neon green) with any hex code.
   ═══════════════════════════════════════════════════════════════════════════
 -->
 
@@ -26,16 +38,59 @@
   />
 </a>
 
-<!-- ══════════════════════════ 02 · TERMINAL ═══════════════════════════════ -->
+<!-- ══════════════════════════ 02 · IDENTITY ═══════════════════════════════ -->
 
-<a href="https://github.com/marwanvx">
+<!--
+  DevQuest Interactive Terminal Card
+  ───────────────────────────────────
+  This is a live, interactive terminal card. Visitors can type commands
+  and explore your GitHub identity. It includes a guestbook feature.
+
+  Template:  terminal
+  Theme:     matrix (neon green on black)
+  API:       https://devquest-mu.vercel.app/api/card
+-->
+
+<a href="https://devquest-mu.vercel.app">
   <img
-    src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=600&size=22&pause=1400&color=00FF41&center=true&vCenter=true&width=720&height=180&lines=marwan%40velix%3A~%24+whoami;%E2%86%92+Marwan;marwan%40velix%3A~%24+cat+role.txt;%E2%86%92+Backend+%C2%B7+Automation+%C2%B7+Reverse+Engineering;marwan%40velix%3A~%24+echo+%24MOTTO;%E2%86%92+To+get+something+you+never+had%2C;%E2%86%92+you+have+to+do+something+you+never+did."
-    alt="Typing terminal animation"
+    src="https://devquest-mu.vercel.app/api/card?username=marwanvx&template=terminal&theme=matrix"
+    alt="Interactive terminal card — type commands to explore my GitHub profile"
+    width="720"
   />
 </a>
 
-<!-- ══════════════════════════ 03 · IDENTITY ═══════════════════════════════ -->
+<br/>
+<br/>
+
+<!-- ══════════════════════════ 03 · SIGNAL ═════════════════════════════════ -->
+
+<!--
+  Neofetch Profile Card
+  ──────────────────────
+  A retro `neofetch`-style stats card. Your GitHub avatar is converted
+  to ASCII art, and stats are fetched live from the GitHub API.
+  Supports dark/light mode via the <picture> element.
+-->
+
+<p align="center">
+  <a href="https://github.com/jeantimex/neofetch-profile">
+    <picture>
+      <source
+        media="(prefers-color-scheme: dark)"
+        srcset="https://neofetch-profile.vercel.app/api?username=marwanvx&theme=github-dark"
+      />
+      <source
+        media="(prefers-color-scheme: light)"
+        srcset="https://neofetch-profile.vercel.app/api?username=marwanvx&theme=github-light"
+      />
+      <img
+        src="https://neofetch-profile.vercel.app/api?username=marwanvx&theme=github-dark"
+        alt="Neofetch-style GitHub stats card"
+        width="720"
+      />
+    </picture>
+  </a>
+</p>
 
 <br/>
 
@@ -43,8 +98,6 @@
 
 > I build automation tools, backend systems, and technical workflows with a
 > focus on clean logic, performance, and reliability.
-
-<br/>
 
 <img src="https://img.shields.io/badge/%F0%9F%94%AD%20BUILDING-automation%20%C2%B7%20backends%20%C2%B7%20RE-0d1117?style=flat-square&labelColor=0d1117&color=00ff41" />
 <img src="https://img.shields.io/badge/%F0%9F%8C%B1%20LEARNING-system%20design%20%C2%B7%20protocols%20%C2%B7%20deobfuscation-0d1117?style=flat-square&labelColor=0d1117&color=00ff41" />
@@ -88,26 +141,33 @@
 
 ---
 
-<!-- ══════════════════════════ 05 · STATS ══════════════════════════════════ -->
+<!-- ══════════════════════════ 05 · METRICS ════════════════════════════════ -->
 
-## <samp>05 · &nbsp;Signal</samp>
+## <samp>05 · &nbsp;Metrics</samp>
 
 <div align="center">
+
+<!--
+  GitHub Stats Extended
+  ─────────────────────
+  Actively maintained successor to github-readme-stats.
+  Fully compatible parameter-wise — just a different domain.
+-->
 
 <p>
   <img
     height="170"
-    src="https://github-readme-stats.vercel.app/api?username=marwanvx&show_icons=true&hide_border=true&bg_color=0d1117&title_color=00ff41&icon_color=00ff41&text_color=c9d1d9&rank_icon=github&include_all_commits=true&count_private=true"
+    src="https://github-stats-extended.vercel.app/api?username=marwanvx&show_icons=true&hide_border=true&bg_color=0d1117&title_color=00ff41&icon_color=00ff41&text_color=c9d1d9&rank_icon=github&include_all_commits=true&count_private=true"
     alt="GitHub stats"
   />
   <img
     height="170"
-    src="https://github-readme-stats.vercel.app/api/top-langs/?username=marwanvx&layout=compact&hide_border=true&bg_color=0d1117&title_color=00ff41&text_color=c9d1d9&langs_count=8&count_private=true"
+    src="https://github-stats-extended.vercel.app/api/top-langs/?username=marwanvx&layout=compact&hide_border=true&bg_color=0d1117&title_color=00ff41&text_color=c9d1d9&langs_count=8&count_private=true"
     alt="Top languages"
   />
 </p>
 
-<!-- ══════════════════════════ 06 · STREAK ═════════════════════════════════ -->
+<!-- ══════════════════════════ 06 · STREAK & ACTIVITY ══════════════════════ -->
 
 <p>
   <img
@@ -115,8 +175,6 @@
     alt="GitHub streak"
   />
 </p>
-
-<!-- ══════════════════════════ 07 · ACTIVITY ═══════════════════════════════ -->
 
 <p>
   <img
@@ -126,44 +184,26 @@
   />
 </p>
 
-<!-- ══════════════════════════ 08 · TROPHIES ═══════════════════════════════ -->
-
-<p>
-  <img
-    src="https://github-profile-trophy.vercel.app/?username=marwanvx&theme=matrix&no-frame=true&no-bg=true&column=7&margin-w=8&margin-h=8"
-    alt="GitHub trophies"
-  />
-</p>
-
 </div>
 
 ---
 
-<!-- ══════════════════════════ 09 · SNAKE ══════════════════════════════════ -->
+<!-- ══════════════════════════ 07 · PLAYABLE GRID ══════════════════════════ -->
 
-## <samp>09 · &nbsp;Contribution Grid</samp>
+## <samp>07 · &nbsp;Playable Grid</samp>
 
 <div align="center">
 
-<picture>
-  <source
-    media="(prefers-color-scheme: dark)"
-    srcset="https://raw.githubusercontent.com/marwanvx/marwanvx/output/github-snake-dark.svg"
-  />
-  <source
-    media="(prefers-color-scheme: light)"
-    srcset="https://raw.githubusercontent.com/marwanvx/marwanvx/output/github-snake.svg"
-  />
-  <img
-    src="https://raw.githubusercontent.com/marwanvx/marwanvx/output/github-snake.svg"
-    alt="Contribution snake"
-    width="100%"
-  />
-</picture>
-
 <!--
-  To enable the snake animation, add this GitHub Action to
-  .github/workflows/snake.yml in a repo named `marwanvx`:
+  Interactive Snake Game
+  ───────────────────────
+  This turns your contribution graph into a playable Snake game.
+  Visitors can use WASD or arrow keys to control the snake.
+
+  SETUP REQUIRED:
+  1. Create a GitHub Action file at `.github/workflows/snake.yml` in this repo.
+  2. Copy the workflow below into that file.
+  3. Commit — the action will generate the SVG on a schedule and on push.
 
   ─────────────────────────────────────────────────────────────
   name: Generate Snake
@@ -196,13 +236,29 @@
   ─────────────────────────────────────────────────────────────
 -->
 
+<picture>
+  <source
+    media="(prefers-color-scheme: dark)"
+    srcset="https://raw.githubusercontent.com/marwanvx/marwanvx/output/github-snake-dark.svg"
+  />
+  <source
+    media="(prefers-color-scheme: light)"
+    srcset="https://raw.githubusercontent.com/marwanvx/marwanvx/output/github-snake.svg"
+  />
+  <img
+    src="https://raw.githubusercontent.com/marwanvx/marwanvx/output/github-snake.svg"
+    alt="Playable contribution snake game"
+    width="100%"
+  />
+</picture>
+
 </div>
 
 ---
 
-<!-- ══════════════════════════ 10 · PROJECTS ═══════════════════════════════ -->
+<!-- ══════════════════════════ 08 · SELECTED WORK ══════════════════════════ -->
 
-## <samp>10 · &nbsp;Selected Work</samp>
+## <samp>08 · &nbsp;Selected Work</samp>
 
 <div align="center">
 
@@ -214,7 +270,7 @@
 </a>
 
 <!--
-  Add pinned-repo cards for your top projects here. Pattern:
+  Add pinned-repo cards here. Pattern:
 
   <a href="https://github.com/marwanvx/REPO_NAME">
     <img src="https://github-readme-stats.vercel.app/api/pin/?username=marwanvx&repo=REPO_NAME&hide_border=true&bg_color=0d1117&title_color=00ff41&icon_color=00ff41&text_color=c9d1d9" />
@@ -225,9 +281,9 @@
 
 ---
 
-<!-- ══════════════════════════ 11 · MOTTO ══════════════════════════════════ -->
+<!-- ══════════════════════════ 09 · MOTTO ══════════════════════════════════ -->
 
-## <samp>11 · &nbsp;Motto</samp>
+## <samp>09 · &nbsp;Motto</samp>
 
 <div align="center">
 
@@ -244,9 +300,9 @@
 
 ---
 
-<!-- ══════════════════════════ 12 · CONTACT ════════════════════════════════ -->
+<!-- ══════════════════════════ 10 · REACH ME ═══════════════════════════════ -->
 
-## <samp>12 · &nbsp;Reach Me</samp>
+## <samp>10 · &nbsp;Reach Me</samp>
 
 <div align="center">
 
@@ -269,7 +325,7 @@
 
 ---
 
-<!-- ══════════════════════════ 13 · FOOTER ═════════════════════════════════ -->
+<!-- ══════════════════════════ 11 · FOOTER ═════════════════════════════════ -->
 
 <div align="center">
 
