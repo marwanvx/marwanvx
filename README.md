@@ -1,158 +1,104 @@
 <!-- ═══════════════════════════════════════════════════════════════════════════
      MARWAN — GITHUB PROFILE README
      ───────────────────────────────────────────────────────────────────────────
-     Palette
-       Background   #0d1117   GitHub dark
-       Accent       #58a6ff   GitHub blue
-       Highlight    #79c0ff   lighter blue
-       Text         #c9d1d9
-       Muted        #8b949e
+     DESIGN       Blueprint Terminal
      ───────────────────────────────────────────────────────────────────────────
-     Layout
-       1. Hero banner — name + roles
-       2. One-line positioning
-       3. Contact badges (inline, 4 total)
-       4. Stats row — stats card + top languages
-       5. Streak card
-       6. Stack — single skillicons strip
-       7. Current focus — 3 lines
+     PALETTE
+       Background   #0B1E33   deep blueprint navy
+       Primary      #4DA6FF   blueprint blue
+       Highlight    #7CC4FF   annotation blue
+       Text         #C9D1D9
+       Muted        #6E7681
      ───────────────────────────────────────────────────────────────────────────
-     One external service per block. If any single one fails, the rest still
-     renders. No typing SVG, no ASCII art, no trophy walls, no animated GIFs.
+     STRUCTURE
+       00 · TITLE       ASCII header + drawing reference
+       01 · SPEC        who, what, current status
+       02 · STACK       single icon strip
+       03 · TELEMETRY   one stats card + one streak card
+       04 · INTERFACE   contact badges
+     ───────────────────────────────────────────────────────────────────────────
+     All assets are live SVG endpoints. No local files. No setup required.
      ═══════════════════════════════════════════════════════════════════════════ -->
 
 
-<!-- ── HERO ──────────────────────────────────────────────────────────────── -->
+<!-- ── 00 · TITLE ────────────────────────────────────────────────────────── -->
 
-<div align="center">
-  <img width="100%" src="https://capsule-render.vercel.app/api?type=waving&color=0:0d1117,100:58a6ff&height=210&section=header&text=Marwan&fontSize=68&fontColor=79c0ff&animation=fadeIn&fontAlignY=38&desc=Backend%20Engineer%20%E2%80%A2%20Automation%20%E2%80%A2%20Reverse%20Engineering&descAlignY=58&descSize=17&descColor=8b949e" alt="Marwan — Backend Engineer, Automation, Reverse Engineering" />
-</div>
+<p align="center">
+  <img width="100%" src="https://capsule-render.vercel.app/api?type=waving&color=0:0B1E33,100:4DA6FF&height=110&section=header" alt="" />
+</p>
 
-<div align="center">
-  <p>I build automation tools, backend systems, and technical workflows with a focus on clean logic, performance, and reliability.</p>
-</div>
+<p align="center">
+  <pre>
+════════════════════════════════════════════════════════════════════════
+   ███╗   ███╗ █████╗ ██████╗ ██╗    ██╗ █████╗ ███╗   ██╗
+   ████╗ ████║██╔══██╗██╔══██╗██║    ██║██╔══██╗████╗  ██║
+   ██╔████╔██║███████║██████╔╝██║ █╗ ██║███████║██╔██╗ ██║
+   ██║╚██╔╝██║██╔══██║██╔══██╗██║███╗██║██╔══██║██║╚██╗██║
+   ██║ ╚═╝ ██║██║  ██║██║  ██║╚███╔███╔╝██║  ██║██║ ╚████║
+   ╚═╝     ╚═╝╚═╝  ╚═╝╚═╝  ╚═╝ ╚══╝╚══╝ ╚═╝  ╚═╝╚═╝  ╚═══╝
+════════════════════════════════════════════════════════════════════════
+   DWG No. MVX-2026-001   ·   SHEET 1 OF 1   ·   REV A   ·   SCALE 1:1
+════════════════════════════════════════════════════════════════════════
+  </pre>
+</p>
 
-<!-- ── CONTACT ───────────────────────────────────────────────────────────── -->
-
-<div align="center">
-
-  <a href="mailto:velixsoft@gmail.com">
-    <img src="https://img.shields.io/badge/velixsoft@gmail.com-0d1117?style=for-the-badge&logo=gmail&logoColor=58a6ff" alt="Email" />
-  </a>
-  <a href="https://velixsoft.net">
-    <img src="https://img.shields.io/badge/velixsoft.net-0d1117?style=for-the-badge&logo=googlechrome&logoColor=58a6ff" alt="Website" />
-  </a>
-  <a href="https://github.com/marwanvx">
-    <img src="https://img.shields.io/badge/marwanvx-0d1117?style=for-the-badge&logo=github&logoColor=58a6ff" alt="GitHub" />
-  </a>
-  <a href="https://discord.gg/mrw.sys">
-    <img src="https://img.shields.io/badge/mrw.sys-0d1117?style=for-the-badge&logo=discord&logoColor=58a6ff" alt="Discord" />
-  </a>
-
-</div>
+<p align="center">
+  <sub><code>BACKEND ENGINEERING  ·  AUTOMATION SYSTEMS  ·  REVERSE ENGINEERING</code></sub>
+</p>
 
 <br/>
 
-<!-- ── STATS ─────────────────────────────────────────────────────────────── -->
+<p align="center">
+  <i>“To get something you never had, you have to do something you never did.”</i>
+</p>
 
-<div align="center">
 
-  <img height="180" src="https://github-readme-stats.vercel.app/api?username=marwanvx&show_icons=true&include_all_commits=true&count_private=true&icon_color=58a6ff&title_color=79c0ff&text_color=c9d1d9&bg_color=0d1117&border_color=30363d&hide_border=false&rank_icon=github" alt="GitHub stats for marwanvx" />
-  <img height="180" src="https://github-readme-stats.vercel.app/api/top-langs/?username=marwanvx&layout=compact&langs_count=8&title_color=79c0ff&text_color=c9d1d9&bg_color=0d1117&border_color=30363d&hide_border=false" alt="Top languages" />
+<!-- ── 01 · SPECIFICATION ─────────────────────────────────────────────────── -->
 
-</div>
+## `01` — Specification
 
-<div align="center">
-  <img width="70%" src="https://streak-stats.demolab.com?user=marwanvx&hide_border=false&border=30363d&background=0D1117&stroke=30363d&ring=58a6ff&fire=79c0ff&currStreakLabel=79c0ff&sideLabels=58a6ff&dates=8b949e&currStreakNum=c9d1d9&sideNums=c9d1d9" alt="Contribution streak" />
-</div>
-
-<br/>
-
-<!-- ── STACK ─────────────────────────────────────────────────────────────── -->
-
-<div align="center">
-  <img src="https://skillicons.dev/icons?i=php,laravel,js,ts,py,nodejs,react,html,css,mysql,postgres,redis,nginx,linux,git,postman,firebase,aws&theme=dark&perline=9" alt="PHP, Laravel, JavaScript, TypeScript, Python, Node.js, React, HTML, CSS, MySQL, PostgreSQL, Redis, Nginx, Linux, Git, Postman, Firebase, AWS" />
-</div>
-
-<br/>
-
-<!-- ── CURRENT FOCUS ─────────────────────────────────────────────────────── -->
-
-<div align="center">
+I build automation tools, backend systems, and technical workflows with a focus on clean logic, performance, and reliability.
 
 **Building** — automation tools · backend systems · reverse engineering projects  
 **Learning** — system design · protocol analysis · deobfuscation techniques  
-**Open to** — automation · scraping · backend development · reverse engineering
+**Open to** — automation · scraping · backend development · reverse engineering  
+**Interested in** — hard protocol decoding problems · scaling large automation systems  
+**Ask me about** — PHP · Laravel · JavaScript · automation · scraping · reverse engineering
 
-</div>
 
-<br/>
+<!-- ── 02 · STACK ────────────────────────────────────────────────────────── -->
+
+## `02` — Stack
+
+<p align="center">
+  <img src="https://skillicons.dev/icons?i=php,laravel,js,ts,py,nodejs,react,html,css,mysql,postgres,redis,nginx,linux,git,postman,firebase,aws&theme=dark&perline=9" alt="PHP, Laravel, JavaScript, TypeScript, Python, Node.js, React, HTML, CSS, MySQL, PostgreSQL, Redis, Nginx, Linux, Git, Postman, Firebase, AWS" />
+</p>
+
+
+<!-- ── 03 · TELEMETRY ────────────────────────────────────────────────────── -->
+
+## `03` — Telemetry
+
+<p align="center">
+  <img src="https://github-readme-stats.vercel.app/api?username=marwanvx&show_icons=true&icon_color=7CC4FF&title_color=4DA6FF&text_color=C9D1D9&bg_color=0B1E33&hide_border=true&rank_icon=github" alt="GitHub stats" height="165" />
+  <img src="https://streak-stats.demolab.com?user=marwanvx&hide_border=true&background=0B1E33&ring=4DA6FF&fire=7CC4FF&currStreakLabel=7CC4FF&sideLabels=4DA6FF&dates=6E7681&currStreakNum=C9D1D9&sideNums=C9D1D9" alt="Contribution streak" height="165" />
+</p>
+
+
+<!-- ── 04 · INTERFACE ────────────────────────────────────────────────────── -->
+
+## `04` — Interface
+
+<p align="center">
+  <a href="mailto:velixsoft@gmail.com"><img src="https://img.shields.io/badge/Email-velixsoft%40gmail.com-0B1E33?style=for-the-badge&logo=gmail&logoColor=4DA6FF&labelColor=0B1E33" alt="Email" /></a>
+  <a href="https://velixsoft.net"><img src="https://img.shields.io/badge/Website-velixsoft.net-0B1E33?style=for-the-badge&logo=googlechrome&logoColor=4DA6FF&labelColor=0B1E33" alt="Website" /></a>
+  <a href="https://github.com/marwanvx"><img src="https://img.shields.io/badge/GitHub-marwanvx-0B1E33?style=for-the-badge&logo=github&logoColor=4DA6FF&labelColor=0B1E33" alt="GitHub" /></a>
+  <a href="https://discord.gg/mrw.sys"><img src="https://img.shields.io/badge/Discord-mrw.sys-0B1E33?style=for-the-badge&logo=discord&logoColor=4DA6FF&labelColor=0B1E33" alt="Discord" /></a>
+</p>
+
 
 <!-- ── FOOTER ────────────────────────────────────────────────────────────── -->
 
-<div align="center">
-  <img width="100%" src="https://capsule-render.vercel.app/api?type=waving&color=0:58a6ff,100:0d1117&height=120&section=footer" alt="" />
-</div>
-
-
-<!--
-═══════════════════════════════════════════════════════════════════════════
-SETUP
-═══════════════════════════════════════════════════════════════════════════
-
-1 · PROFILE REPOSITORY
-    Create a public repo named exactly `marwanvx`.
-    Paste this README.md into the root.
-
-2 · ENABLE PRIVATE CONTRIBUTIONS (optional, one click)
-    github.com/settings/profile
-    → enable "Include private contributions on my profile"
-    The stats cards pick this up automatically on next refresh.
-
-3 · HOW THE PIECES FIT
-
-    Hero banner        capsule-render, animated fadeIn, gradient dark → blue
-    Contact row        shields.io for-the-badge, dark background
-    Stats row          github-readme-stats with border_color=30363d
-    Streak card        streak-stats.demolab.com, matched palette
-    Stack strip        skillicons.dev, dark theme, single image, perline=9
-    Focus block        static markdown, three lines
-    Footer             capsule-render mirrored gradient
-
-    Each block uses a different service. If any one service goes down, the
-    others still render. No single point of failure.
-
-4 · PALETTE
-    Background   #0d1117
-    Accent       #58a6ff
-    Highlight    #79c0ff
-    Text         #c9d1d9
-    Muted        #8b949e
-    Border       #30363d
-
-    Every endpoint above is parameterised to this palette, so the whole
-    page reads as one consistent design instead of a patchwork.
-
-5 · WHY NOT MORE
-    You asked for something that looks good. These are the visual elements
-    that actually carry a README:
-      • One strong hero with your name
-      • Consistent palette across every card
-      • Two stats widgets, not five
-      • One icon strip, not eighteen separate <a> tags
-    Anything beyond this starts to look like a generated template.
-
-    If you want to add a projects section later, put it between the stack
-    strip and the focus block. Three to five real repos, one line each.
-    Don't add a trophy wall or a snake animation.
-
-6 · SERVICES
-    capsule-render               hero + footer banners
-    shields.io                   contact badges
-    github-readme-stats          stats + top languages
-    streak-stats.demolab.com     contribution streak
-    skillicons.dev               stack strip
-    All free, public, actively maintained.
-
-═══════════════════════════════════════════════════════════════════════════
--->
+<p align="center">
+  <img width="100%" src="https://capsule-render.vercel.app/api?type=waving&color=0:4DA6FF,100:0B1E33&height=110&section=footer" alt="" />
+</p>
